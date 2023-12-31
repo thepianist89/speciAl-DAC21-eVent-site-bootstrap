@@ -1,0 +1,136 @@
+.navbar .btn-outline-light:hover {
+  color: var(--bs-dark);
+}
+
+.navbar .btn-outline-light:hover {
+  color: var(--bs-dark);
+}
+
+/*in this case on a utilisé 
+  la variable --bs-dark déjà existante dans bootstrap 
+  pour la couleur foncé mais on peut utiliser le code 
+  directement de la couleur */
+
+.navbar {
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-sticky {
+  opacity: 0.9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.header,
+.carousel {
+  background: url(/img/pages/bg-p2.png) center center no-repeat;
+  background-size: cover;
+}
+
+.nos-valeurs {
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.card-group {
+  background: #b6e4c5;
+}
+
+.card {
+  box-shadow: inset -1rem -4rem 80rem #b6e4c5;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#photo-testim-1 {
+  aspect-ratio: 1;
+  height: 120px;
+  filter: brightness(1.2);
+  object-fit: cover;
+}
+
+.footer .team-members :nth-child(1) {
+  border: 0.05rem solid rgb(6, 170, 91);
+  transition: all 0.5s ease;
+}
+
+.footer .team-members :nth-child(1):hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+.footer .team-members :nth-child(2) {
+  border: 0.05rem solid rgb(6, 170, 91);
+  transition: all 0.5s ease;
+}
+
+.footer .team-members :nth-child(2):hover {
+  transform: translateY(5px) scale(1.03);
+}
+
+.footer .team-members :nth-child(3) {
+  border: 0.05rem solid rgb(6, 170, 91);
+  transition: all 0.5s ease;
+}
+
+.footer .team-members :nth-child(3):hover {
+  transform: translateY(-6px) scale(1.08);
+}
+
+.footer .team-members :nth-child(4) {
+  border: 0.05rem solid rgb(6, 170, 91);
+  transition: all 0.5s ease;
+}
+
+.footer .team-members :nth-child(4):hover {
+  transform: translateY(8px) scale(1.1);
+}
+
+// footer
+
+#big-logo {
+  max-width: 460px;
+}
+// carousel:
+.carousel-inner {
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.carousel-inner:hover {
+  transform: translateY(-3px) scale(1.03);
+}
+
+// page 2 : contact
+.map iframe {
+  left: 0;
+  top: 0;
+  height: 400px;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+@media (max-width: 1000px) {
+  .hero .image-container {
+    display: flex;
+    justify-content: center;
+  }
+  .hero .text-container {
+    text-align: center;
+  }
+  #big-logo {
+    max-width: 230px;
+  }
+}
+
+@media (max-width: 766px) {
+  .footer-imgs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  #big-logo {
+    max-width: 440px;
+  }
+}
