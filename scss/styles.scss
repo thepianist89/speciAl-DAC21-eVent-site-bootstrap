@@ -6,11 +6,6 @@
   color: var(--bs-dark);
 }
 
-/*in this case on a utilisé 
-  la variable --bs-dark déjà existante dans bootstrap 
-  pour la couleur foncé mais on peut utiliser le code 
-  directement de la couleur */
-
 * {
   scroll-behavior: smooth;
 }
@@ -91,11 +86,6 @@
   transform: translateY(8px) scale(1.1);
 }
 
-// footer
-
-#big-logo {
-  max-width: 460px;
-}
 // carousel:
 .carousel-inner {
   cursor: pointer;
@@ -105,7 +95,7 @@
   transform: translateY(-3px) scale(1.03);
 }
 
-// page 2 : contact
+// *****************************page 2 : contact
 .map iframe {
   left: 0;
   top: 0;
@@ -113,6 +103,70 @@
   width: 100%;
   border: none;
   outline: none;
+}
+/***********************************************/
+
+// *************
+// footer
+footer {
+  position: relative;
+}
+
+#big-logo {
+  max-width: 460px;
+  transition: all 0.4s ease-in-out;
+}
+
+#big-logo:hover {
+  border: 0.05rem solid #b6e4c5;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-top-right-radius: 20%;
+  border-bottom-left-radius: 20%;
+}
+
+// to the moon btn :
+
+.to-the-moon-btn {
+  position: absolute;
+  bottom: -0.8rem;
+  right: -1rem;
+  display: flex;
+  flex-direction: column;
+  border-right-color: var(--bg-color);
+}
+.to-the-moon-btn i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: var(--second-bg-color);
+  border-radius: 50%;
+  backdrop-filter: brightness(80%);
+  font-size: 20px;
+  gap: 17px;
+  box-shadow: 0 0 20px transparent;
+  cursor: pointer;
+  transition: all 0.8s ease;
+  background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s infinite;
+}
+.to-the-moon-btn i:hover {
+  transform: scale(1.4) rotate(360deg);
+  box-shadow: 0 0 20px var(--btn-color);
+  color: white;
+}
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -136,5 +190,30 @@
   }
   #big-logo {
     max-width: 440px;
+    margin-top: 1.8rem;
+  }
+}
+
+@media (max-width: 516px) {
+  .footer-imgs {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    width: 95%;
+  }
+  #big-logo {
+    display: grid;
+    place-content: center;
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+  .to-the-moon-btn i {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
   }
 }
